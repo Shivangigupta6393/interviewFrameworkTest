@@ -21,7 +21,6 @@ class TestRestApi(BaseClass):
         print(f"data is {data}")
         resp = False
         for record in data:
-            print(f"exec for loop, record = {record}")
             for key in expected_keys:
                 assert key in record
                 resp = True

@@ -63,7 +63,7 @@ def setup(request):
 ])
 def setUpEndpoint(request):
         endpoint = request.param
-        response = requests.get(endpoint)
+        response = requests.get(endpoint, verify=False)
         #print(f"response from conftest is {response}")
         return response
 

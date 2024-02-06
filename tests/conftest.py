@@ -13,15 +13,6 @@ import csv
 
 
 def get_test_data_from_csv():
-<<<<<<< Updated upstream
-        with open("./testData/test1.csv", "r") as file:
-                csvreader = csv.reader(file)
-                rows = [row for row in csvreader]
-                #titles = rows[1]
-                rows.pop(0)
-                rows.pop(0)
-                #print(f"rows is {rows} length is {len(rows)}&& titles are {titles}")
-=======
         try:
                 with open("./testData/test.csv", "r") as file:
                         csvreader = csv.reader(file)
@@ -33,7 +24,6 @@ def get_test_data_from_csv():
         except Exception as e:
                 rows = []
                 print(e)
->>>>>>> Stashed changes
         return (rows)
 
 @pytest.fixture(params = get_test_data_from_csv())

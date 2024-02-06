@@ -10,7 +10,7 @@ from interviewFrameworkTest.utilities.Baseclass import BaseClass
 
 
 @pytest.mark.usefixtures("setup")
-class TestWikipediaUI(BaseClass):
+class TestBrowserActions(BaseClass):
 
     @pytest.mark.Smoke
     def test_http_post_loaded(self, setup):

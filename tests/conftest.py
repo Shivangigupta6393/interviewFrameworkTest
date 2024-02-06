@@ -32,7 +32,7 @@ def test_data(request):
 
 @pytest.fixture(scope= "class")
 def setup(request):
-        serv_obj = Service("driverObjects/chromedriver")
+        #serv_obj = Service("driverObjects/chromedriver")
         # email = request.param[0]
         # name = request.param[1]
         # company = request.param[2]
@@ -44,10 +44,10 @@ def setup(request):
         options.add_argument('--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36')
         options.add_argument("--ignore-certificate-errors")
         options.page_load_strategy = "eager"
-
-        driver = webdriver.Chrome(service=serv_obj,
-                                  options=options
-                                  )
+        driver = webdriver.Chrome(options=options)
+        #driver = webdriver.Chrome(service=serv_obj, options=options
+                                  #)
+        print("any browser")
         driver.implicitly_wait(10)
         url = "https://dlptest.com/"
         driver.get(url)

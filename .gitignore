@@ -1,1 +1,4 @@
 /TestResults/*
+tests/testResults/report_detail.html
+tests/testResults/pytest.log
+*.pyc

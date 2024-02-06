@@ -12,7 +12,7 @@ import csv
 
 
 def get_test_data_from_csv():
-        with open("./testData/test1.csv", "r") as file:
+        with open("./testData/test.csv", "r") as file:
                 csvreader = csv.reader(file)
                 rows = [row for row in csvreader]
                 #titles = rows[1]

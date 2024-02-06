@@ -34,7 +34,7 @@ class TestWikipediaUI(BaseClass):
         email = test_data[0]
         name = test_data[1]
         company = test_data[2]
-        log_msg.warn(email, name, company)
+        log_msg.warning(f"email, name, company : {email} {name} {company}")
         self.driver, message = httpPage.click_subscribe(email, name , company)
         assert "successful" in message
         assert "http-post/" in self.driver.current_url
@@ -53,7 +53,8 @@ class TestWikipediaUI(BaseClass):
         email = test_data[0]
         name = test_data[1]
         company = test_data[2]
-        log_msg.debug(email, name, company)
+        print(f"failing data is {name}{email}{company}")
+        log_msg.debug(f"email, name, company : {email} {name} {company}")
         self.driver, message = httpsPage.click_subscribe(email, name , company)
         assert "successful" in message
         assert "https-post/" in self.driver.current_url
